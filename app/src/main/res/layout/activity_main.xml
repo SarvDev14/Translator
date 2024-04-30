@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/translator_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <EditText
+                android:background="@drawable/edit_txt_background"
+                android:id="@+id/input"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="50dp"
+                android:hint="Enter the sentence"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_margin="5dp"
+                    android:hint="Select"
+                    android:gravity="center"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/language_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arrow">
+
+                </ImageView>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_margin="5dp"
+                    android:hint="Select"
+                    android:gravity="center"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/language_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        >
+
+
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/translate"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="TRANSLATE"
+                    android:layout_marginEnd="10dp">
+
+                </Button>
+
+                <Button
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/button_speak"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="Speak">
+
+                </Button>
+
+                <Button
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/button_text_to_sp"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="Text To Speech">
+
+                </Button>
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:background="@drawable/output_field_background"
+                android:id="@+id/output"
+                android:padding="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
